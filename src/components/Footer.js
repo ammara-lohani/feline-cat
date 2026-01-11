@@ -9,14 +9,7 @@ const Footer = () => {
             padding: '4rem 2rem',
             marginTop: 'auto'
         }}>
-            <div style={{
-                maxWidth: '1200px',
-                margin: '0 auto',
-                display: 'flex',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: '2rem'
-            }}>
+            <div className="footer-container">
                 <div>
                     <h3 style={{ marginBottom: '1rem', letterSpacing: '0.1em' }}>FELINE VOGUE</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', color: '#888' }}>

@@ -9,7 +9,7 @@ const reviews = [
 
 const Reviews = () => {
     return (
-        <section style={{ padding: '6rem 2rem', borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
+        <section className="section-padding" style={{ borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
                 {reviews.map((review, i) => (
                     <motion.div

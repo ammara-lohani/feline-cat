@@ -67,16 +67,10 @@ const Hero = () => {
                 </motion.p>
 
                 <motion.h1
+                    className="hero-title"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                    style={{
-                        fontSize: 'clamp(3rem, 10vw, 8rem)',
-                        lineHeight: 0.9,
-                        marginBottom: '2rem',
-                        textShadow: '0 4px 10px rgba(0,0,0,0.5)',
-                        letterSpacing: '-0.03em'
-                    }}
                 >
                     PURE <br />
                     <span style={{ fontStyle: 'italic', fontWeight: 300 }}>ELEGANCE</span>
@@ -123,7 +117,7 @@ const Hero = () => {
                     </a>
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 };
 

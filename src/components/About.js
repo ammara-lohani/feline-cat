@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" style={{ padding: '8rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <section id="about" className="section-padding" style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem', alignItems: 'center', textAlign: 'center' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

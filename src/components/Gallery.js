@@ -71,7 +71,7 @@ const cats = [
 
 const Gallery = () => {
     return (
-        <section id="collections" style={{ padding: '6rem 2rem', maxWidth: '1400px', margin: '0 auto' }}>
+        <section id="collections" className="section-padding" style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -92,11 +92,7 @@ const Gallery = () => {
                 </motion.h2>
             </div>
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-                gap: '4rem 2rem'
-            }}>
+            <div className="grid-responsive">
                 {cats.map((cat, index) => (
                     <motion.div
                         key={cat.id}

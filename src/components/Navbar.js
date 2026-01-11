@@ -37,7 +37,7 @@ const Navbar = () => {
         color: isScrolled || isMobileMenuOpen ? 'var(--color-primary)' : 'var(--color-bg)',
       }}
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1400px', margin: '0 auto' }}>
+      <div className="nav-container">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -56,13 +56,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Links */}
-        <div className="desktop-menu" style={{ display: 'none', gap: '3rem', md: { display: 'flex' } }}>
-          <style>{`
-            @media (min-width: 768px) {
-              .desktop-menu { display: flex !important; }
-              .mobile-toggle { display: none !important; }
-            }
-          `}</style>
+        <div className="desktop-menu">
           {navLinks.map((link) => (
             <motion.a
               key={link.name}
@@ -86,7 +80,7 @@ const Navbar = () => {
         {/* Icons */}
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
 
-          <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ cursor: 'pointer' }}>
+          <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} color="var(--color-primary)" /> : <Menu size={24} style={{ color: isScrolled ? 'var(--color-primary)' : 'inherit' }} />}
           </div>
         </div>
