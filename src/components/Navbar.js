@@ -99,30 +99,43 @@ const Navbar = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'var(--color-bg)',
-              zIndex: 99,
+              width: '100vw',
+              height: '100vh',
+              backgroundColor: '#FFFFFF',
+              zIndex: 999, /* Increased z-index */
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '2rem',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%', marginBottom: '2rem' }}>
+              <X size={32} color="var(--color-primary)" onClick={() => setIsMobileMenuOpen(false)} style={{ cursor: 'pointer' }} />
+            </div>
+
+            <div style={{
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
               gap: '2rem',
-            }}
-          >
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '2rem',
-                  color: 'var(--color-primary)',
-                  cursor: 'pointer',
-                }}
-              >
-                {link.name}
-              </a>
-            ))}
+              flex: 1
+            }}>
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '2rem',
+                    color: 'var(--color-primary)',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
