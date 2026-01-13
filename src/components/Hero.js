@@ -3,16 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section style={{
-            height: '100vh',
-            width: '100%',
-            position: 'relative',
-            overflow: 'hidden',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#000'
-        }}>
+        <section className="hero-section">
             {/* Background Image */}
             <div
                 style={{

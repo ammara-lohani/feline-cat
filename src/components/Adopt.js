@@ -25,7 +25,7 @@ const Adopt = () => {
                     style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}
                     onSubmit={(e) => e.preventDefault()}
                 >
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                    <div className="adopt-form-grid">
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                             <label style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Name</label>
                             <input type="text" style={{ padding: '1rem', border: '1px solid #ddd', backgroundColor: 'transparent', fontSize: '1rem' }} placeholder="Your Name" />
